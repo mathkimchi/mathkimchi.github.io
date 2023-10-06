@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TeaVM example</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script type="text/javascript" charset="utf-8"
+        src="../../../build/generated/teavm/js/java-wasm-teavm-test.js"></script>
+</head>
+
+<body>
+    <script>
+        main();
+    </script>
+    <script>
+        // call a Java function that isn't main:
+
+        document.getElementById("javaMethodCaller").dispatchEvent(new Event("callJavaMethod"))
+    </script>
+</body>
+
+</html>
