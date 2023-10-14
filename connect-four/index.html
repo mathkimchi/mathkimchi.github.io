@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="build/generated/teavm/js/connect-four.js"></script>
+</head>
+
+<body>
+    <tt id="board-display">
+        ┌───┬───┬───┬───┬───┬───┬───┐
+        <br>
+        │pla│ce&nbsp;│hol│der│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+        <br>
+        │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+        <br>
+        │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+        <br>
+        │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+        <br>
+        │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+        <br>
+        │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│
+        <br>
+        │&nbsp;0&nbsp;│&nbsp;1&nbsp;│&nbsp;2&nbsp;│&nbsp;3&nbsp;│&nbsp;4&nbsp;│&nbsp;5&nbsp;│&nbsp;6&nbsp;│
+        <br>
+        └───┴───┴───┴───┴───┴───┴───┘
+        <br>
+    </tt>
+
+    <br>
+
+    <input type="number" id="col" min="0" max="6" value="3">
+
+    <button id="play">Play</button>
+
+    <div id="win-screen" style="display: none;">
+        <h1>You Win!</h1>
+    </div>
+    <div id="tie-screen" style="display: none;">
+        <h1>You Tie!</h1>
+    </div>
+    <div id="lose-screen" style="display: none;">
+        <h1>You Lose!</h1>
+    </div>
+
+    <script>main();</script>
+</body>
+
+</html>
