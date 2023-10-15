@@ -48,7 +48,11 @@ public class Main {
                 if (game.board.isDone()) {
                     if (game.board.wasWon()) {
                         // p1 win or p2 win
-                        document.getElementById("win-screen").getStyle().setProperty("display", "block");
+                        // if (game.gamelog.size()%2) {
+
+                        // }
+                        document.getElementById("p" + ((game.gamelog.size() + 1) % 2 + 1) + "-screen").getStyle()
+                                .setProperty("display", "block");
                         System.out.println("Win alert (or lose i guess)");
                     } else {
                         // tie
@@ -62,9 +66,11 @@ public class Main {
         }
 
         boardDisplay = document.getElementById("board-display");
+
         updateBoardDisplay();
 
         System.out.println("js has been set up");
+
     }
 
     public static void main(String... args) {
