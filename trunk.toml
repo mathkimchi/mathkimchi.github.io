@@ -1,0 +1,3 @@
+[build]
+dist = "docs"
+target = "target.html"

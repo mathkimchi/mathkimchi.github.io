@@ -630,12 +630,12 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper1933 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 175, __wbg_adapter_20);
+    imports.wbg.__wbindgen_closure_wrapper1942 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 183, __wbg_adapter_20);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper3234 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 332, __wbg_adapter_23);
+    imports.wbg.__wbindgen_closure_wrapper3256 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 340, __wbg_adapter_23);
         return addHeapObject(ret);
     };
 
@@ -677,7 +677,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('mathkimchi-github-io-99fd45948ebebc9b_bg.wasm', import.meta.url);
+        input = new URL('mathkimchi-github-io-4370e254c10a587a_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
