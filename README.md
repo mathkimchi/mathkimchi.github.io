@@ -18,3 +18,7 @@ Actually, I just realized that I don't actually need to run wasm-pack or trunk's
 I think I just need to call `trunk build` on the top level, and that should run build.rs.
 
 Yeah, I got it to display the example text on a website.
+
+Now, I want to make sure that everything will deploy correctly on GitHub Pages.
+
+I also made a Makefile for convenience but idk if I did it correct.
