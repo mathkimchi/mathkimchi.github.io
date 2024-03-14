@@ -2,6 +2,8 @@
 
 ## Devlog
 
+### Setup
+
 When I tried using Yew last time and tried to access a json file in the browser, I got an error because the script was being run in the browser.
 So, I decided to figure out build.rs, which allows me to run scripts when building, where I have access to the files.
 
@@ -22,3 +24,39 @@ Yeah, I got it to display the example text on a website.
 Now, I want to make sure that everything will deploy correctly on GitHub Pages.
 
 I also made a Makefile for convenience but idk if I did it correct.
+
+Ok, after a few tries, it GH pages to work.
+
+I added a favicon but I don't actually know if it is going to work or not.
+
+Now, time to make the actual website.
+The general plan for now is:
+
+- [ ] Basic Pages:
+  - [ ] Router (not a page, but is the glue)
+  - [ ] Home page
+    - [ ] Main purpose
+  - [ ] Pages for each video/project
+    - [ ] Don't hard code each, either use JSON or get data from youtube and github directly
+  - [ ] Pages for each topic
+  - [ ] Navigation page
+- [ ] Universal Elements
+  - [ ] Navbar
+  - [ ] Search
+  - [ ] Socials link and contact form
+- [ ] Improve UX (TBH, I just wrote this because it sounds important)
+  - [ ] Think of customer journey
+- [ ] Make it look cool
+  - [ ] css colors
+  - [ ] Animations?
+- [ ] Have this also run on mathkimchi.org
+
+### Router
+
+The idea is to have a Root component, and everything is inside the Root component, no matter what page it is.
+
+I am going to put a Router inside of Root to load different sub content inside of the Root component, depending on the url.
+
+I did this for my other yew projects, so it should be pretty straight forword this time.
+
+I got it working on my system, now I'll have to see if it actually works or not (and also remember to check the favicon, because that wasn't working on my system).
