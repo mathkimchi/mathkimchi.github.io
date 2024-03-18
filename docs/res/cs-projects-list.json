@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Project 0",
+        "page_link": "/example0",
+        "youtube_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "placeholder image 0",
+        "description": "placeholder text 0"
+    },
+    {
+        "name": "Project 1",
+        "page_link": "/example1",
+        "youtube_link": "https://www.youtube.com/watch?v=3tuJ34YgW0c",
+        "image": "placeholder image 1",
+        "description": "placeholder text 1"
+    }
+]

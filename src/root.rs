@@ -37,7 +37,6 @@ pub fn Root() -> Html {
     html! {
         <BrowserRouter>
             <Switch<Route> render={switch} />
-            <p> {"global element test"} </p>
         </BrowserRouter>
     }
 }
