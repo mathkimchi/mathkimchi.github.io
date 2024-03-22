@@ -1,1 +1,357 @@
-<!doctype html><meta charset=UTF-8><title>Alvin Kim Projects</title><style>:not(:root[data-theme="light"]){--text:#e6e3e8;--background:#09070a;--primary:#c2aecc;--secondary:#5d3c6e;--accent:#965bb3;--text-50:#0d0b0e;--text-100:#1a171c;--text-200:#342e38;--text-300:#4e4554;--text-400:#685c70;--text-500:#82738c;--text-600:#9b8fa3;--text-700:#b4abba;--text-800:#cdc7d1;--text-900:#e6e3e8;--text-950:#f3f1f4;--background-50:#0e0a0f;--background-100:#1b151e;--background-200:#362a3c;--background-300:#513f5a;--background-400:#6c5478;--background-500:#876996;--background-600:#9f87ab;--background-700:#b7a5c0;--background-800:#cfc3d5;--background-900:#e7e1ea;--background-950:#f3f0f5;--primary-50:#0e0a10;--primary-100:#1b141f;--primary-200:#37273f;--primary-300:#523b5e;--primary-400:#6e4f7d;--primary-500:#89629d;--primary-600:#a182b0;--primary-700:#b8a1c4;--primary-800:#d0c0d8;--primary-900:#e7e0eb;--primary-950:#f3eff5;--secondary-50:#0e0910;--secondary-100:#1c1221;--secondary-200:#382442;--secondary-300:#543663;--secondary-400:#704884;--secondary-500:#8c5ba4;--secondary-600:#a37bb7;--secondary-700:#ba9cc9;--secondary-800:#d1bddb;--secondary-900:#e8deed;--secondary-950:#f3eff6;--accent-50:#0e0811;--accent-100:#1d1023;--accent-200:#392046;--accent-300:#563069;--accent-400:#73408c;--accent-500:#8f50af;--accent-600:#a673bf;--accent-700:#bc96cf;--accent-800:#d2b9df;--accent-900:#e9dcef;--accent-950:#f4eef7}:root[data-theme="light"] {--text:#1a171c;--background:#f8f6f9;--primary:#473352;--secondary:#b392c3;--accent:#874ca4;--text-50:#f3f1f4;--text-100:#e6e3e8;--text-200:#cdc7d1;--text-300:#b4abba;--text-400:#9b8fa3;--text-500:#82738c;--text-600:#685c70;--text-700:#4e4554;--text-800:#342e38;--text-900:#1a171c;--text-950:#0d0b0e;--background-50:#f3f0f5;--background-100:#e7e0eb;--background-200:#cfc2d6;--background-300:#b8a3c2;--background-400:#a085ad;--background-500:#886699;--background-600:#6d527a;--background-700:#523d5c;--background-800:#36293d;--background-900:#1b141f;--background-950:#0e0a0f;--primary-50:#f3eff5;--primary-100:#e7e0eb;--primary-200:#d0c0d8;--primary-300:#b8a1c4;--primary-400:#a082b0;--primary-500:#88629d;--primary-600:#6d4f7d;--primary-700:#523b5e;--primary-800:#37273f;--primary-900:#1b141f;--primary-950:#0e0a10;--secondary-50:#f3eff6;--secondary-100:#e8deed;--secondary-200:#d1bddb;--secondary-300:#ba9cc9;--secondary-400:#a37bb7;--secondary-500:#8c5ba4;--secondary-600:#704884;--secondary-700:#543663;--secondary-800:#382442;--secondary-900:#1c1221;--secondary-950:#0e0910;--accent-50:#f4eef7;--accent-100:#e9dcef;--accent-200:#d2b9df;--accent-300:#bc96cf;--accent-400:#a673bf;--accent-500:#8f50af;--accent-600:#73408c;--accent-700:#563069;--accent-800:#392046;--accent-900:#1d1023;--accent-950:#0e0811}body{background-color:var(--background);color:var(--text)}ul.navbar{list-style-type:none;margin:0;padding:0;overflow:hidden;background-color:var(--secondary);position:sticky;top:0}ul.navbar li{float:left}ul.navbar li a{display:block;color:var(--text);text-align:center;padding:14px 16px;text-decoration:none;border-right:1px solid var(--accent)}ul.navbar li:last-child {border-right:none}ul.navbar li:hover {background-color:var(--secondary-200);cursor:pointer}.vertcenter{top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%)}.horcenter{left:50%;-ms-transform:translateX(-50%);transform:translateX(-50%)}#hero{position:relative;height:100vh}#heroText{position:absolute;right:0%;left:50%;text-align:center}</style><link as=fetch crossorigin href=/mathkimchi-github-io-ebcfd2b4b9361e82_bg.wasm integrity=sha384-MvGhbHly4qx3nXhg4n55Q2SS3we_kvzwm5Qt4KN7R1AlIU4Ga3Tozf6lDPN6t8RP rel=preload type=application/wasm><link crossorigin href=/mathkimchi-github-io-ebcfd2b4b9361e82.js integrity=sha384-X4pIy4ZQQrEwVoI52aqjH8Vfifwuj2Rupnn3Ewdnyg4IgRLXGDo_KBFnv_PPhdJA rel=modulepreload></head><body><script type=module>import a,*as b from"/mathkimchi-github-io-ebcfd2b4b9361e82.js";a(`/mathkimchi-github-io-ebcfd2b4b9361e82_bg.wasm`);window.wasmBindings=b</script></body></html>
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <title>Alvin Kim Projects</title>
+    <style>
+        /* Dark */
+        :not(:root[data-theme="light"]) {
+            /* From: https://www.realtimecolors.com/?colors=e6e3e8-09070a-c2aecc-5d3c6e-965bb3&fonts=Poppins-Poppins */
+
+            --text: #e6e3e8;
+            --background: #09070a;
+            --primary: #c2aecc;
+            --secondary: #5d3c6e;
+            --accent: #965bb3;
+
+            --text-50: #0d0b0e;
+            --text-100: #1a171c;
+            --text-200: #342e38;
+            --text-300: #4e4554;
+            --text-400: #685c70;
+            --text-500: #82738c;
+            --text-600: #9b8fa3;
+            --text-700: #b4abba;
+            --text-800: #cdc7d1;
+            --text-900: #e6e3e8;
+            --text-950: #f3f1f4;
+
+            --background-50: #0e0a0f;
+            --background-100: #1b151e;
+            --background-200: #362a3c;
+            --background-300: #513f5a;
+            --background-400: #6c5478;
+            --background-500: #876996;
+            --background-600: #9f87ab;
+            --background-700: #b7a5c0;
+            --background-800: #cfc3d5;
+            --background-900: #e7e1ea;
+            --background-950: #f3f0f5;
+
+            --primary-50: #0e0a10;
+            --primary-100: #1b141f;
+            --primary-200: #37273f;
+            --primary-300: #523b5e;
+            --primary-400: #6e4f7d;
+            --primary-500: #89629d;
+            --primary-600: #a182b0;
+            --primary-700: #b8a1c4;
+            --primary-800: #d0c0d8;
+            --primary-900: #e7e0eb;
+            --primary-950: #f3eff5;
+
+            --secondary-50: #0e0910;
+            --secondary-100: #1c1221;
+            --secondary-200: #382442;
+            --secondary-300: #543663;
+            --secondary-400: #704884;
+            --secondary-500: #8c5ba4;
+            --secondary-600: #a37bb7;
+            --secondary-700: #ba9cc9;
+            --secondary-800: #d1bddb;
+            --secondary-900: #e8deed;
+            --secondary-950: #f3eff6;
+
+            --accent-50: #0e0811;
+            --accent-100: #1d1023;
+            --accent-200: #392046;
+            --accent-300: #563069;
+            --accent-400: #73408c;
+            --accent-500: #8f50af;
+            --accent-600: #a673bf;
+            --accent-700: #bc96cf;
+            --accent-800: #d2b9df;
+            --accent-900: #e9dcef;
+            --accent-950: #f4eef7;
+        }
+
+        :root[data-theme="light"] {
+            /* From: https://www.realtimecolors.com/?colors=e6e3e8-09070a-c2aecc-5d3c6e-965bb3&fonts=Poppins-Poppins */
+
+            --text: #1a171c;
+            --background: #f8f6f9;
+            --primary: #473352;
+            --secondary: #b392c3;
+            --accent: #874ca4;
+
+            --text-50: #f3f1f4;
+            --text-100: #e6e3e8;
+            --text-200: #cdc7d1;
+            --text-300: #b4abba;
+            --text-400: #9b8fa3;
+            --text-500: #82738c;
+            --text-600: #685c70;
+            --text-700: #4e4554;
+            --text-800: #342e38;
+            --text-900: #1a171c;
+            --text-950: #0d0b0e;
+
+            --background-50: #f3f0f5;
+            --background-100: #e7e0eb;
+            --background-200: #cfc2d6;
+            --background-300: #b8a3c2;
+            --background-400: #a085ad;
+            --background-500: #886699;
+            --background-600: #6d527a;
+            --background-700: #523d5c;
+            --background-800: #36293d;
+            --background-900: #1b141f;
+            --background-950: #0e0a0f;
+
+            --primary-50: #f3eff5;
+            --primary-100: #e7e0eb;
+            --primary-200: #d0c0d8;
+            --primary-300: #b8a1c4;
+            --primary-400: #a082b0;
+            --primary-500: #88629d;
+            --primary-600: #6d4f7d;
+            --primary-700: #523b5e;
+            --primary-800: #37273f;
+            --primary-900: #1b141f;
+            --primary-950: #0e0a10;
+
+            --secondary-50: #f3eff6;
+            --secondary-100: #e8deed;
+            --secondary-200: #d1bddb;
+            --secondary-300: #ba9cc9;
+            --secondary-400: #a37bb7;
+            --secondary-500: #8c5ba4;
+            --secondary-600: #704884;
+            --secondary-700: #543663;
+            --secondary-800: #382442;
+            --secondary-900: #1c1221;
+            --secondary-950: #0e0910;
+
+            --accent-50: #f4eef7;
+            --accent-100: #e9dcef;
+            --accent-200: #d2b9df;
+            --accent-300: #bc96cf;
+            --accent-400: #a673bf;
+            --accent-500: #8f50af;
+            --accent-600: #73408c;
+            --accent-700: #563069;
+            --accent-800: #392046;
+            --accent-900: #1d1023;
+            --accent-950: #0e0811;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        /* Nav bar css from https://www.w3schools.com/css/css_navbar_horizontal.asp */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: var(--secondary);
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: var(--text);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-right: 1px solid var(--accent);
+        }
+
+        ul.navbar li:last-child {
+            border-right: none;
+        }
+
+        ul.navbar li:hover {
+            background-color: var(--secondary-200);
+            cursor: pointer;
+        }
+
+        .vertcenter {
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .horcenter {
+            left: 50%;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        #hero {
+            position: relative;
+            height: 100vh;
+            /* display: flex; */
+            /* border: 1px solid pink; */
+        }
+
+        #heroText {
+            /* border: 1px solid green; */
+            position: absolute;
+            right: 0%;
+            left: 50%;
+            text-align: center;
+        }
+
+        /* * {
+            border: 1px solid red;
+        } */
+    </style>
+
+<link rel="preload" href="/mathkimchi-github-io-1a659923ca872e9e_bg.wasm" as="fetch" type="application/wasm" crossorigin="anonymous" integrity="sha384-HBL9cjovXwFnZ12k6k2rAGr5YRIjVYSugCysx-jJ4mw7SCs_N4exebjTZe62FGOI">
+<link rel="modulepreload" href="/mathkimchi-github-io-1a659923ca872e9e.js" crossorigin="anonymous" integrity="sha384-6u92HUAzMFRsKZoJJyAE028C8uFdxvOlDUOytmcyT8O8r8pDC2nFUwoC5X71ntur"></head>
+
+<body>
+
+
+<script type="module">
+import init, * as bindings from '/mathkimchi-github-io-1a659923ca872e9e.js';
+init('/mathkimchi-github-io-1a659923ca872e9e_bg.wasm');
+window.wasmBindings = bindings;
+
+</script><script>"use strict";
+
+(function () {
+
+    const address = '{{__TRUNK_ADDRESS__}}';
+    let protocol = '';
+    protocol =
+        protocol
+            ? protocol
+            : window.location.protocol === 'https:'
+                ? 'wss'
+                : 'ws';
+    const url = protocol + '://' + address + '/_trunk/ws';
+
+    class Overlay {
+        constructor() {
+            // create an overlay
+            this._overlay = document.createElement("div");
+            const style = this._overlay.style;
+            style.height = "100vh";
+            style.width = "100vw";
+            style.position = "fixed";
+            style.top = "0";
+            style.left = "0";
+            style.backgroundColor = "rgba(222, 222, 222, 0.5)";
+            style.fontFamily = "sans-serif";
+            // not sure that's the right approach
+            style.zIndex = "1000000";
+            style.backdropFilter = "blur(1rem)";
+
+            const container = document.createElement("div");
+            // center it
+            container.style.position = "absolute";
+            container.style.top = "30%";
+            container.style.left = "15%";
+            container.style.maxWidth = "85%";
+
+            this._title = document.createElement("div");
+            this._title.innerText = "Build failure";
+            this._title.style.paddingBottom = "2rem";
+            this._title.style.fontSize = "2.5rem";
+
+            this._message = document.createElement("div");
+            this._message.style.whiteSpace = "pre-wrap";
+
+            const icon= document.createElement("div");
+            icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#dc3545" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>';
+            this._title.prepend(icon);
+
+            container.append(this._title, this._message);
+            this._overlay.append(container);
+
+            this._inject();
+            window.setInterval(() => {
+                this._inject();
+            }, 250);
+        }
+
+        set reason(reason) {
+            this._message.textContent = reason;
+        }
+
+        _inject() {
+            if (!this._overlay.isConnected) {
+                // prepend it
+                document.body?.prepend(this._overlay);
+            }
+        }
+
+    }
+
+    class Client {
+        constructor(url) {
+            this.url = url;
+            this.poll_interval = 5000;
+            this._overlay = null;
+        }
+
+        start() {
+            const ws = new WebSocket(this.url);
+            ws.onmessage = (ev) => {
+                const msg = JSON.parse(ev.data);
+                switch (msg.type) {
+                    case "reload":
+                        this.reload();
+                        break;
+                    case "buildFailure":
+                        this.buildFailure(msg.data)
+                        break;
+                }
+            };
+            ws.onclose = this.onclose;
+        }
+
+        onclose() {
+            window.setTimeout(
+                () => {
+                    // when we successfully reconnect, we'll force a
+                    // reload (since we presumably lost connection to
+                    // trunk due to it being killed, so it will have
+                    // rebuilt on restart)
+                    const ws = new WebSocket(this.url);
+                    ws.onopen = () => window.location.reload();
+                    ws.onclose = this.onclose;
+                },
+                this.poll_interval);
+        }
+
+        reload() {
+            window.location.reload();
+        }
+
+        buildFailure({reason}) {
+            // also log the console
+            console.error("Build failed:", reason);
+
+            console.debug("Overlay", this._overlay);
+
+            if (!this._overlay) {
+                this._overlay = new Overlay();
+            }
+            this._overlay.reason = reason;
+        }
+    }
+
+    new Client(url).start();
+
+})()
+</script></body></html>

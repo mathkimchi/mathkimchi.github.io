@@ -105,7 +105,9 @@ Sometimes, when doing `make watch`, the build.rs doesn't update the data, so I d
 
 I have a proof-of-concept homepage with generated projects, so I am going to commit.
 
-I am also weighing the pros and cons of having the data stored with the website (like now), vs having the data stored seperately.
+### 2023/3/17 Alternative Data Storage
+
+I am weighing the pros and cons of having the data stored with the website (like now), vs having the data stored seperately.
 
 - Stored via build.rs
   - Pros
@@ -133,3 +135,46 @@ I am also weighing the pros and cons of having the data stored with the website 
 - Gathered from YouTube
   - I'm not going to do this as a replacement for the other options because projects and videos are not 1 to 1
   - Could be useful for a seperate feature
+
+I am going to look into trunk hooks, because it might let me replace build.rs.
+
+I think it will let me automatically run a command at many stages of `trunk build`, and the important one for me is post build.
+
+```toml
+[[hooks]]
+stage = "post_build"
+command = "make"
+command_arguments = ["trunk_post_build"]
+```
+
+Where I also added trunk_post_build to my makefile.
+
+I don't think it works.
+Apparently, after finishing the hook, it applies a new distribution, which idk the meaning of, but I am pretty sure this cancels out the changes to the /docs directory.
+So, it is useless for my purposes.
+
+I could set up my own version of `trunk watch` with the cargo watch crate, and maybe add `trunk serve` functionality through python https, but I am not going to do that.
+
+In conclusion, I'm going to stick with a build.rs for now.
+
+### 2023/3/18 Individual Project Pages
+
+I am going to generate the project pages based on the project JSON.
+
+My current goal is just to get the router to work.
+
+A project named "Project Name" will be found at `/project/project-name`.
+In other words, I am going to turn the project name into kebab case (lowercase, hyphen instead of space) and append it to the end of `/project/`.
+I might not want to do this, because it might be better for links to be like: `/project/cs/webdev/really-cool-website`, but I will cross that bridge when I get to it.
+
+Well, I think the rust replace function for strings uses regex, and I don't know how to represent a single space literal in regex so it is not working.
+Actually, my original code of `" "` was right, but clippy was being annoying about it.
+I changed it to a char, `' '` and that satisfied clippy.
+I think this change was actually good, but I am just writing it down for no reason.
+
+2023/3/22 Continued...
+
+Youtube doesn't allow for video linking without a public domain.
+
+I don't think I can fix this on localhost, but maybe it works on git pages.
+I'm going to commit and see what happens.

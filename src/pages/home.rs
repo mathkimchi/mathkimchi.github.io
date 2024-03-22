@@ -18,11 +18,12 @@ struct ProjectProperty {
 }
 
 #[function_component]
-fn Project(ProjectProperty { cs_project }: &ProjectProperty) -> Html {
+fn ProjectItem(ProjectProperty { cs_project }: &ProjectProperty) -> Html {
+    gloo_console::debug!(cs_project.get_page_link_str());
     html! {
         <div id={cs_project.name.clone()} class="csproject">
             <h1> {cs_project.name.clone()} </h1>
-            <a href={cs_project.page_link.clone()}> {cs_project.description.clone()} </a>
+            <a href={cs_project.get_page_link_str()}> {cs_project.description.clone()} </a>
         </div>
         // {format!("{:?}", property.cs_project)}
     }
@@ -38,14 +39,14 @@ fn ProjectsList() -> Html {
         .into_iter()
         .map(|cs_project| {
             html! {
-                <Project {cs_project}></Project>
+                <ProjectItem {cs_project}></ProjectItem>
             }
         })
         .collect()
 }
 
 #[function_component]
-pub fn Home() -> Html {
+pub fn HomePage() -> Html {
     html! {
         <>
             <span style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">

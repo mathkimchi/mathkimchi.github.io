@@ -1,4 +1,5 @@
 all:
+# empty on purpose
 
 build:
 	trunk build --release
