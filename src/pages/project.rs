@@ -1,6 +1,6 @@
 use yew::prelude::*;
 
-use crate::cs_project_list;
+use crate::{components::navbar::Navbar, cs_project_list};
 
 #[derive(PartialEq, Properties)]
 pub struct ProjectPageProperty {
@@ -16,6 +16,7 @@ pub fn ProjectPage(ProjectPageProperty { project_name }: &ProjectPageProperty) -
 
     html! {
         <>
+            <Navbar/>
             <iframe type="text/html" src={format!("https://www.youtube.com/embed/{}", project.youtube_embed)}>
                 <p> {"video is unavailable"} </p>
             </iframe>

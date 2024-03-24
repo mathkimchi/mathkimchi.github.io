@@ -105,7 +105,7 @@ Sometimes, when doing `make watch`, the build.rs doesn't update the data, so I d
 
 I have a proof-of-concept homepage with generated projects, so I am going to commit.
 
-### 2023/3/17 Alternative Data Storage
+### 2024/3/17 Alternative Data Storage
 
 I am weighing the pros and cons of having the data stored with the website (like now), vs having the data stored seperately.
 
@@ -157,7 +157,7 @@ I could set up my own version of `trunk watch` with the cargo watch crate, and m
 
 In conclusion, I'm going to stick with a build.rs for now.
 
-### 2023/3/18 Individual Project Pages
+### 2024/3/18 Individual Project Pages
 
 I am going to generate the project pages based on the project JSON.
 
@@ -172,9 +172,58 @@ Actually, my original code of `" "` was right, but clippy was being annoying abo
 I changed it to a char, `' '` and that satisfied clippy.
 I think this change was actually good, but I am just writing it down for no reason.
 
-2023/3/22 Continued...
+2024/3/22 Continued...
 
 Youtube doesn't allow for video linking without a public domain.
 
 I don't think I can fix this on localhost, but maybe it works on git pages.
 I'm going to commit and see what happens.
+
+### 2024/3/22 Cleaning
+
+For some reason, it took 3 and a half minutes to build and deploy onto gh pages, when it ususually takes less than 1.
+
+However, the videos do show up on gh pages.
+
+Before I start adding actual data, I am going to do clean up, aka making it look good.
+
+- [ ] Navbar
+  - [ ] Navbar for all pages
+  - [ ] Actual navbar links
+- [ ] 404 Page
+  - [ ] Main feature is it allows going back to the homepage
+
+2024/3/24 continued
+
+The Navbar only has the homepage, but that is really the only important page I have right now.
+
+I deleted the example pages and all the pages have a navbar.
+
+For the 404 page, I changed the message and just added a navbar so people can go back.
+
+Idk, I think I can add my real projects now.
+
+Here is the todo list from the very beginning, the check means I have done the bare minimum for that feature.
+
+- [ ] Basic Pages:
+  - [X] Router (not a page, but is the glue)
+  - [X] Home page
+    - Main purpose of this entire repository.
+  - [X] Pages for each video/project
+    - [X] Don't hard code each, either use JSON or get data from youtube and github directly
+  - [ ] Pages for each topic
+  - [ ] Navigation page
+- [ ] Universal Components
+  - [X] Navbar
+  - [ ] Search
+  - [ ] Socials link and contact form
+- [ ] Improve UX (TBH, I just wrote this because it sounds important)
+  - Think of customer journey
+- [ ] Make it look cool
+  - [ ] css colors
+  - [ ] Animations?
+  - [ ] darkmode/lightmode button
+- [ ] Have this also run on mathkimchi.org
+  - [ ] Having a custom email domain as well would be pretty sick
+- [ ] Store visitor analytics
+  - maybe this is lame
