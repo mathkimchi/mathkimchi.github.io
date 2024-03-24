@@ -15,8 +15,9 @@ pub mod cs_project_list {
     pub struct CsProject {
         pub name: String,
         pub youtube_embed: String,
-        pub image: String,
         pub description: String,
+        pub image: Option<String>,
+        pub github_link: Option<String>,
     }
 
     impl CsProject {

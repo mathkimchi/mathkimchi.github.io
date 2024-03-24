@@ -1,5 +1,41 @@
 # Math Kimchi Home Page
 
+## Plan
+
+Check means I did the bare minimum
+
+- [ ] Basic Pages:
+  - [X] Router (not a page, but is the glue)
+  - [X] Home page
+    - Main purpose of this entire repository.
+    - [X] Hero
+    - [X] List best projects
+    - [ ] Extra links
+      - like github, youtube channel
+  - [X] Pages for each video/project
+    - [X] Don't hard code each, either use JSON or get data from youtube and github directly
+  - [ ] Pages for each topic
+  - [ ] Navigation page
+- [ ] Universal Components
+  - [X] Navbar
+  - [ ] Search
+  - [ ] Socials link and contact form
+  - [ ] Footer
+    - Explain this site was made with rust and yew.
+    - Point is to say that I wrote it myself without being too blatant about it.
+- [ ] Improve UX (TBH, I just wrote this because it sounds important)
+  - Think of customer journey
+- [ ] Make it look cool
+  - [ ] css colors
+  - [ ] Animations?
+  - [ ] darkmode/lightmode button
+  - [ ] Reactive css to support phones
+- [ ] Have this also run on mathkimchi.org
+  - [ ] Having a custom email domain as well would be pretty sick
+- [ ] Store visitor analytics
+  - maybe this is lame
+- [ ] Blogs?
+
 ## Devlog
 
 ### Setup
@@ -227,3 +263,28 @@ Here is the todo list from the very beginning, the check means I have done the b
   - [ ] Having a custom email domain as well would be pretty sick
 - [ ] Store visitor analytics
   - maybe this is lame
+
+### 2024/3/24
+
+I will add my actual projects to the json now.
+
+Later, I should have a way to differentiate the best projects from the rest, because I don't want to clutter the homepage.
+For now, I am just adding my best/favorite projects to the json.
+
+Also, idk if I already said this, but the build.rs trick to save the json only updates if you do `cargo clean`.
+
+I just went over my github and youtube channel and picked my favorites.
+
+I realized that jsonl is json but with comments and extra commas.
+I hope that serde supports jsonl.
+
+Serde doesn't, so I'm just going to use normal json.
+
+I wanted the videos to look bigger, so I followed: <https://help.viostream.com/frequently-asked-questions/how-do-i-make-an-iframe-embed-responsive/>.
+
+I added an optional github link.
+I also realized, I can split up the html into smaller chunks inside a single function through variables, without needing to make an entire functional or structural component in yew.
+It is pretty obvious, but I never thought of doing that.
+
+I think my site is finally at a bare minimum stage of being usable right now.
+It is still very ugly and I still have many more features I want to add, but it is getting somewhere.

@@ -1,14 +1,26 @@
 [
     {
-        "name": "Project 0",
-        "youtube_embed": "dQw4w9WgXcQ?si=pw3wHWD2ZGpHaQpX",
-        "image": "placeholder image 0",
-        "description": "placeholder text 0"
+        "name": "Buddhabrot Fractal",
+        "youtube_embed": "RPyMQrB7p-M?si=a-AmFGz7IhBmyBR1",
+        "description": "A rust renderer of the Buddhabrot fractal, a cousin of the Mandelbrot set.",
+        "github_link": "https://github.com/mathkimchi/Fractals"
     },
     {
-        "name": "Project 1",
-        "youtube_embed": "3tuJ34YgW0c",
-        "image": "placeholder image 1",
-        "description": "placeholder text 1"
+        "name": "Java Sockets Game",
+        "youtube_embed": "QDPW4oaNGHE?si=-0dbQ8i2WQnYBB2V",
+        "description": "A multiplayer shooting game written with only the Java standard library. Multiplayer functionality through java sockets, and GUI through javax swing and java awt.",
+        "github_link": "https://github.com/mathkimchi/JavaSocketsGame"
+    },
+    {
+        "name": "Connect 4 Bot",
+        "youtube_embed": "69UMmM32hK8?si=QIpdk0OwAE1wyKb-",
+        "description": "A connect four bot that uses the minimax algorithm.",
+        "github_link": "https://github.com/mathkimchi/Connect-4"
+    },
+    {
+        "name": "Double Pendulum",
+        "youtube_embed": "su2JeoTvhY0",
+        "description": "A double pendulum physics simulation written in Java.",
+        "github_link": "https://github.com/mathkimchi/Pendulum-Simulation"
     }
 ]
