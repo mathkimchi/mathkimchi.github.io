@@ -14,11 +14,18 @@ Check means I did the bare minimum
       - like github, youtube channel
   - [X] Pages for each video/project
     - [X] Don't hard code each, either use JSON or get data from youtube and github directly
-  - [ ] Pages for each topic
+    - [ ] Display its categories
+  - [ ] Categories Page
+    - [ ] One listing all categories
+      - Maybe make them heirarchical
+      - Let the subcategories fold on click and also unfold to show individual projects
+    - [ ] Also a page for each individual category
+      - Display the projects in those categories
+      - Display related categories
   - [ ] Navigation page
 - [ ] Universal Components
   - [X] Navbar
-  - [ ] Search
+  - [ ] Search (should also have a page)
   - [ ] Socials link and contact form
   - [ ] Footer
     - Explain this site was made with rust and yew.
@@ -35,6 +42,7 @@ Check means I did the bare minimum
 - [ ] Store visitor analytics
   - maybe this is lame
 - [ ] Blogs?
+  - Could be a less official alternative for mathkimchi videos.
 
 ## Devlog
 
@@ -264,7 +272,7 @@ Here is the todo list from the very beginning, the check means I have done the b
 - [ ] Store visitor analytics
   - maybe this is lame
 
-### 2024/3/24
+### 2024/3/24 Adding Real Projects
 
 I will add my actual projects to the json now.
 
@@ -288,3 +296,57 @@ It is pretty obvious, but I never thought of doing that.
 
 I think my site is finally at a bare minimum stage of being usable right now.
 It is still very ugly and I still have many more features I want to add, but it is getting somewhere.
+
+### 2024/3/24 Squarespace Experiment Gone Wrong
+
+I was experimenting with allowing this to run on a squarespace domain, but it didn't work, so I removed it in the settings.
+However, when I went on `mathkimchi.github.io`, it kept redirecting me to `mathkimchi.org`, the squarespace domain.
+I thought I might've needed to redeploy, so I disabled ghpages then enabled it again, but it didn't work.
+So, I went on the ghpage on incognito, and it did not redirect me.
+In the end, I realized that Firefox was being weird, not github or squarespace.
+I just needed to clear my cookies and it is working again.
+But, I had a mini heartattack because I need to work on my homework right now and I thought I would need to do a drastic fix.
+
+### 2024/3/29 Project Categories
+
+I am going to add project categories to allow for better organization.
+
+When I say category, I really mean tags, as one project can have any number of categories.
+
+The categories I will have are:
+
+- Best (for listing on the home page)
+- Math
+- Coding
+  - Fractal (under coding because it is focused on rendering)
+  - Simulation
+    - Physics Simulation
+    - Behavioral Simulation
+  - Game Development
+  - Game Bot
+- Musical Performance
+
+These will be title case with spaces allowed when represented in JSON, simply because that is what I did for the names. Similarly, I will be converting to kebab case for the url.
+
+TODO: look into Enums for the categories.
+
+Also, I will be refactoring the entire "cs-projects-list.json" format. Here are the changes I will make now to clean up before actually implementing the code:
+
+- [x] Renamed "cs-projects-list.json" to "projects.json"
+- [x] Move mod cs_project_list into its own file called project_data.rs
+- [x] Instead of being a list of projects, it is { "category_list": [...], "project_list": [main file before] }
+- [x] Removed Option\<Images\> from code, as it was not being used. Will probably add this back later
+- [x] Rename "description" key to "synopsis" to signify that it is supposed to be very short, and should be able to be read instantly. I will probably add longer descriptions as well, to go on the individual pages.
+- [x] Rename all the ones like cs project to just project
+- [x] Delete res/example.txt
+
+I am also considering using the project name as a key. Actually, I realized that that would be annoying for several reasons.
+
+Okay, this all seems to be working.
+
+Now, I will actually add functionality to the categories. I am just going to add a few categories, and I will add actual data later.
+
+I will add a generated page for each category, ex,  `/category/game-development`.
+The code for listing the projects in a category was pretty much just the code for listing the good projects in the homepage so I made it its new component.
+
+I also made a root categories page which lists all categories.
