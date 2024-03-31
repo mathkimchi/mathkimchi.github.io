@@ -350,3 +350,23 @@ I will add a generated page for each category, ex,  `/category/game-development`
 The code for listing the projects in a category was pretty much just the code for listing the good projects in the homepage so I made it its new component.
 
 I also made a root categories page which lists all categories.
+
+### 2024/3/30 Adding More Data
+
+I wish I had a scraping bot that could do this for me.
+
+But, the title is self explanatory.
+I will add all the data and see if it works.
+
+Actually, I am going to make youtube embed optional as well.
+
+I'm not going to list every gh repo.
+I might add every video though, I'm not sure.
+
+I added the videos.
+
+The next things I should really do soon are:
+
+- Adding links to gh and yt
+- Project root
+- Add a way to get pretty name from url name, will allow me to display the pretty names in the projects, as well as do other cool stuff.

@@ -46,6 +46,106 @@
                 "Simulation",
                 "Physics Simulation"
             ]
+        },
+        {
+            "name": "Minimax",
+            "youtube_embed": "XfOiCMHNHO0",
+            "synopsis": "Minimax is a way to optimize the worst case senario. Explanation slides and tictactoe implementation.",
+            "github_link": "https://docs.google.com/document/d/1sEIcuabNL44ZGBnDSoFwql84aQAixHhBKua3q9w3VlA",
+            "categories": [
+                "Coding",
+                "Game Development",
+                "Game Bot"
+            ]
+        },
+        {
+            "name": "Monte Carlo Part 1 of 2",
+            "youtube_embed": "uWJx3gkToME",
+            "synopsis": "Monte Carlo algorithms use random samples to approximate something. Part one of Monte Carlo is the explanation of it.",
+            "categories": [
+                "Coding",
+                "Game Development",
+                "Game Bot"
+            ]
+        },
+        {
+            "name": "Monte Carlo Part 2 of 2",
+            "youtube_embed": "rUxqbL15MGI",
+            "synopsis": "Part 2 of Monte Carlo algorithms. An implementation of it in a connect four bot.",
+            "categories": [
+                "Coding",
+                "Game Development",
+                "Game Bot"
+            ]
+        },
+        {
+            "name": "Linear Regression Implementation",
+            "youtube_embed": "1dw5-UTQ37k",
+            "synopsis": "Linear regression finds the line of best fit.",
+            "github_link": "https://docs.google.com/document/d/1DXtt-QMKH6AAhNT8cUy1hQnWJDglKOvuaxZZLsTGdVQ",
+            "categories": [
+                "Math",
+                "Coding"
+            ]
+        },
+        {
+            "name": "Arithmetic and Geometric Sequences",
+            "youtube_embed": "k-jNximPx1M",
+            "synopsis": "Arithmetic and Geometric Sequences and related formulas",
+            "categories": [
+                "Math"
+            ]
+        },
+        {
+            "name": "Djikstra's Algorithm",
+            "youtube_embed": "e9CElQrQ-Kg",
+            "synopsis": "Djikstra's Algorithm finds the shortest path",
+            "github_link": "https://github.com/mathkimchi/Dot-Drawer/blob/main/djikstra.py",
+            "categories": [
+                "Coding"
+            ]
+        },
+        {
+            "name": "2D N-Body Simulation",
+            "youtube_embed": "A1EvW1SlkmA",
+            "synopsis": "A physics simulation of circles that affect each other gravitationally written in Java.",
+            "github_link": "https://github.com/mathkimchi/nbody-physics-sim",
+            "categories": [
+                "Coding",
+                "Simulation",
+                "Physics Simulation"
+            ]
+        },
+        {
+            "name": "2D Elastic Collision Simulation",
+            "youtube_embed": "4Vo51eNKZoU",
+            "synopsis": "Adding collisions to a 2d n-body simulation I wrote previously.",
+            "github_link": "https://github.com/mathkimchi/nbody-physics-sim",
+            "categories": [
+                "Coding",
+                "Simulation",
+                "Physics Simulation"
+            ]
+        },
+        {
+            "name": "Finding Convex Hulls using the Jarvis March",
+            "youtube_embed": "CG0dvH-z50w",
+            "synopsis": "A convex hull finds the smallest convex shape that surrounds a set of points.",
+            "github_link": "https://github.com/mathkimchi/Dot-Drawer/blob/main/convexhull.py",
+            "categories": [
+                "Math",
+                "Coding"
+            ]
+        },
+        {
+            "name": "3 Terrain Generation Algorithms",
+            "youtube_embed": "E3Fa2QoRyzo",
+            "synopsis": "Midpoint displacement, diamond-square, and perlin noise are algorithms that randomly generate natural terrain.",
+            "github_link": "https://github.com/mathkimchi/Terrain-Generation",
+            "categories": [
+                "Coding",
+                "Game Development"
+            ]
         }
     ],
     "category_list": [

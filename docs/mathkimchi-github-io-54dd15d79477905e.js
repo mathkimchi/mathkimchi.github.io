@@ -884,7 +884,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('mathkimchi-github-io-7b3abf787edb7f04_bg.wasm', import.meta.url);
+        input = new URL('mathkimchi-github-io-54dd15d79477905e_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
