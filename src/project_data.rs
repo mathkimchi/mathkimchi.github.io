@@ -66,6 +66,14 @@ pub mod category {
     pub fn get_page_link_str(category_name: &String) -> String {
         format!("/category/{}", category_name.to_kebab_case())
     }
+
+    pub fn category_map_by_kebab() -> HashMap<String, String> {
+        HashMap::from_iter(
+            get_category_list()
+                .into_iter()
+                .map(|category| (category.to_kebab_case(), category)),
+        )
+    }
 }
 
 // putting this at bottom because it can be seperated

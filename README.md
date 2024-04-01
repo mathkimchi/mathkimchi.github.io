@@ -370,3 +370,45 @@ The next things I should really do soon are:
 - Adding links to gh and yt
 - Project root
 - Add a way to get pretty name from url name, will allow me to display the pretty names in the projects, as well as do other cool stuff.
+
+### 2024/3/31 Cleaning
+
+I am once again, just cleaning - that is to say, I am going to make a bunch of minor adjustments:
+
+- [x] Handle error on bad project link
+- [x] Adding links to gh and yt in homepage
+  - I will put these in their proper places later when I add actual footers
+- [x] Project root
+- [x] Display pretty name in project pages
+  - [x] Add a way to get pretty name from url name
+
+In order to add the socials, I had to do revert some of the old css I did, which is a small bummer but I have given up on making this look good a long time ago.
+But, I learned about the \<hr\> tag, which is cool.
+It is a horizontal line that represents a different type of content, and I will be using those until I ever try to seperate content with actually good css.
+
+I also want to add little icons for each social, rather than using text.
+I got the logos from the websites' favicons, because I couldn't bother getting the svg to work.
+However, as a side effect, they are low quality.
+It looks very bad right now, but I already knew that.
+
+Next is project root, I will just make it display everything.
+Just like putting category root in category_page.rs, I will put the project root page in project_page.rs.
+I just copied and slightly modified the category root.
+I also just added a header: "Projects" and "Categories" to both roots.
+
+That was easy.
+Next is to display the pretty name in each project page.
+The problem is that each project page only gets the url name (the-kebab-one), and for reasons, I do not want to simply turn the kebab-case into Title Case.
+So, I will undo the kebab case by looking at the original project list and finding the project that matches.
+But before that, I want to sleep.
+
+I slept.
+
+I just realized, I already got the project for other stuff, so I can just use project.name.
+I thought this would be annoying but it was easy.
+To make this a little more challenging for myself, I am going to do the same thing for categories.
+I just added a function that returns a map with the keys the ugly name and the values the pretty name.
+It is kind of redundant, but speed does not matter right now.
+
+I wonder if I should make a const for the project data so I don't have to parse it each time.
+Now, it breaks when the category doesn't exist but once again, I can repeat what I did for the project pages.

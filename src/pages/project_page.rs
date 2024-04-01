@@ -4,13 +4,23 @@ use crate::{components::navbar::Navbar, project_data::Project};
 
 #[derive(PartialEq, Properties)]
 pub struct ProjectPageProperty {
-    pub project_name: String,
+    pub project_kebab_name: String,
 }
 
 #[function_component]
-pub fn ProjectPage(ProjectPageProperty { project_name }: &ProjectPageProperty) -> Html {
+pub fn ProjectPage(ProjectPageProperty { project_kebab_name }: &ProjectPageProperty) -> Html {
+    if !Project::project_map_by_kebab().contains_key(project_kebab_name) {
+        return html! {
+            <>
+                <Navbar/>
+                <p>{"The project \""} {project_kebab_name} {"\" does not exist."}</p>
+                <p>{"Check your url for typos or go to the "} <a href="/"> {"main page"} </a> {"."}</p>
+            </>
+        };
+    }
+
     let project = Project::project_map_by_kebab()
-        .get(project_name)
+        .get(project_kebab_name)
         .unwrap()
         .clone();
 
@@ -37,8 +47,27 @@ pub fn ProjectPage(ProjectPageProperty { project_name }: &ProjectPageProperty) -
     html! {
         <>
             <Navbar/>
+            <h1>{project.name}</h1>
             {video_html}
             {github_link_html}
+        </>
+    }
+}
+
+#[function_component]
+pub fn ProjectRootPage() -> Html {
+    let project_list: Html = Project::get_project_list()
+        .into_iter()
+        .map(|project| html! {<li> <a href={project.get_page_link_str()}>{project.name}</a> </li>})
+        .collect();
+
+    html! {
+        <>
+            <Navbar/>
+            <h1> {"Projects"} </h1>
+            <ul>
+                {project_list}
+            </ul>
         </>
     }
 }

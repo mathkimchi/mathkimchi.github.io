@@ -46,13 +46,28 @@ fn Hero() -> Html {
 
 #[function_component]
 pub fn HomePage() -> Html {
+    let socials = html! {
+        <>
+            <h2>{"Socials:"}</h2>
+            <a href={"https://github.com/mathkimchi"} style="padding: 5px;">
+                <img src="https://github.githubassets.com/favicons/favicon-dark.png" style="width: 30px; height: 30px;"/>
+                // {"mathkimchi"} // name is redundant?
+            </a>
+            <a href={"https://www.youtube.com/@mathkimchi"} style="padding: 5px;">
+                <img src="https://www.youtube.com/s/desktop/accca349/img/favicon.ico" style="width: 30px; height: 30px;"/>
+            </a>
+        </>
+    };
+
     html! {
         <>
-            <span style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
-                <Hero/>
-                <ProjectList project_list={Project::get_projects_with_category(&"best".to_string())}/>
-            </span>
             <Navbar/>
+            <Hero/>
+            <hr/>
+            <h1>{"Best Projects:"}</h1>
+            <ProjectList project_list={Project::get_projects_with_category(&"best".to_string())}/>
+            <hr/>
+            {socials}
         </>
     }
 }
