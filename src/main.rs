@@ -29,7 +29,7 @@ pub fn App() -> Html {
             // let videos = videos.clone();
             wasm_bindgen_futures::spawn_local(async move {
                 let fetched_videos: HashMap<String, String> =
-                    Request::get("https://yew.rs/tutorial/data.json")
+                    Request::get("https://api.github.com/repos/mathkimchi/mathkimchi.github.io/contents/projects.json?ref=resources")
                         .send()
                         .await
                         .unwrap()

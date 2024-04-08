@@ -467,3 +467,8 @@ But one thing this shows me is that it would probably be very unreliable for the
 I won't be using reqwest and tokio because the [yew docs](https://yew.rs/docs/tutorial#fetching-data-using-external-rest-api) isn't using it.
 I think almost all APIs are going to fail if I access it on my localhost, similar to how the youtube embed was failing.
 I will try committing and see what happens.
+
+---
+
+That didn't work.
+It is disabling cross origin requests, so maybe it will work if I call the github API.
