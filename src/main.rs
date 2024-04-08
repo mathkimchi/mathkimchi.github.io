@@ -28,13 +28,13 @@ pub fn App() -> Html {
         use_effect_with((), move |_| {
             // let videos = videos.clone();
             wasm_bindgen_futures::spawn_local(async move {
-                let fetched_videos: HashMap<String, String> =
+                let fetched_videos =
                     Request::get("https://api.github.com/repos/mathkimchi/mathkimchi.github.io/contents/projects.json?ref=resources")
                         .send()
                         .await
-                        .unwrap()
-                        .json()
-                        .await
+                        // .unwrap()
+                        // .json()
+                        // .await
                         .unwrap();
                 log!(format!("{:?}", fetched_videos));
             });

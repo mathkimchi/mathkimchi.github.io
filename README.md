@@ -472,3 +472,8 @@ I will try committing and see what happens.
 
 That didn't work.
 It is disabling cross origin requests, so maybe it will work if I call the github API.
+
+---
+
+Well, I got another error, so I guess that is some progress.
+I will try not parsing the json.
