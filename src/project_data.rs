@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
-include!(concat!(env!("OUT_DIR"), "/projects_data.rs"));
+// include!(concat!(env!("OUT_DIR"), "/projects_data.rs"));
 
 #[derive(Serialize, Deserialize, Debug, PartialEq, Clone)]
 pub struct ProjectData {
@@ -11,6 +11,8 @@ pub struct ProjectData {
 impl ProjectData {
     pub fn new() -> ProjectData {
         use gloo_console::log;
+
+        let PROJECTS_DATA_STR = todo!();
 
         log!(PROJECTS_DATA_STR);
 

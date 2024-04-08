@@ -451,3 +451,19 @@ I will sleep on this and see what I think of it tomorrow.
 It has been a few days and I have decided to make a new branch called resources, which will be the replacement for the res folder.
 It was a pretty arbitrary decision and both options of making a seperate branch or repo are not ideal.
 If I can eventually get a backend to work and store the resources, I will do that.
+
+Well, now I need to actually change the source code to accomidate for this.
+Though I refer to all of res, I do not really care about the favicon or the buddhabrot images, since those won't be changed frequently.
+
+I will be following https://rust-lang-nursery.github.io/rust-cookbook/web/clients/apis.html.
+The link to fetch will be https://api.github.com/repos/mathkimchi/mathkimchi.github.io/contents/projects.json?ref=resources.
+`ref=resources` refers to the branch being resources.
+<!-- Actually, https://raw.githubusercontent.com/mathkimchi/mathkimchi.github.io/resources/projects.json might be better. -->
+
+Hmm... I was testing and I keep getting a status 403 error, which means that Github api is refusing my requests because I reached the rate limit.
+I don't know what it is, but I have done it less than 10 times so far, so I have no clue why the api is already blocking me.
+But one thing this shows me is that it would probably be very unreliable for the users as well if it is unreliable for me.
+
+I won't be using reqwest and tokio because the [yew docs](https://yew.rs/docs/tutorial#fetching-data-using-external-rest-api) isn't using it.
+I think almost all APIs are going to fail if I access it on my localhost, similar to how the youtube embed was failing.
+I will try committing and see what happens.
