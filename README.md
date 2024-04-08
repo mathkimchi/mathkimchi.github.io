@@ -477,3 +477,21 @@ It is disabling cross origin requests, so maybe it will work if I call the githu
 
 Well, I got another error, so I guess that is some progress.
 I will try not parsing the json.
+
+---
+
+Okay, I got the api to run, but it has a limit of 60 and that is not a lot, so I will try romething else.
+I won't be using another api either because those will also have their own problems like an api limit or not being free, and it will be a lot of effort.
+
+Instead, I think I can come up with a compromise.
+I want:
+
+- easy to change content seperately from the resources
+- easy to develop, aka live development
+
+I am going to get rid of build rs and get the json the same way I get the favicon.
+I was not doing this because it was annoying to do live development with this, but I found out I can insert `<link data-trunk rel="copy-dir" href="res">` to the original html file, to get it to be copied every build.
+This is pretty much exactly the thing I was looking for.
+
+Actually, something even better is just the include_str macro.
+In the end, I didn't really change anything.

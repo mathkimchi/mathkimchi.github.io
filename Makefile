@@ -4,9 +4,6 @@ all:
 build:
 	trunk build --release
 	cp docs/index.html docs/404.html
-	mkdir docs/res
-	cp res/* docs/res
-	cp docs/res/favicon.ico docs
 
 # Yeah, technically is serve not watch
 watch:
