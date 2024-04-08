@@ -412,3 +412,42 @@ It is kind of redundant, but speed does not matter right now.
 
 I wonder if I should make a const for the project data so I don't have to parse it each time.
 Now, it breaks when the category doesn't exist but once again, I can repeat what I did for the project pages.
+
+<!-- ### 2024/4/4 Branches
+
+I am going to experiment with branches.
+
+Previously, I just had a main branch (and some other irrelevant branches) and the files were stored in doc/.
+
+I made a new branch called update-projects and gh-pages.
+The update-projects branch will only be for updating the projects.json.
+
+When pushing to any branch other than gh-pages, I won't need to worry about building.
+
+When I am satisfied with a change I made, I will commit it to whatever branch I was working on, and then merge that branch to the main branch.
+Then, I will build the code that is on the main branch, and with that change, I will push it to gh-pages.
+
+I feel like that last part can be automated with github actions or git hooks, but I will not look into that right at this moment.
+
+The other development branches will be called `feature/cool-thing` or `bugfix/broken-thing`.
+As for this markdown, I will not worry about it because I am just one person and I will only have one active development branch.
+Later, it would be cool to have a better way to manage this devlog, but that is not important right now.
+
+I did this because 
+
+1. Practice for bigger projects
+2. Decouple content from source code
+   1. I am considering another way so that updates to the content will not require git commits and rebuilding. -->
+
+### 2024/4/4 Decoupling
+
+I was going to decouple my code with a complicated system of branches, but I think a simpler way is to have a branch called content with only what is currently in my res folder.
+Or, I could have an entirely new repository.
+I am not sure if further decoupling is even a good idea because it would make my code slower.
+I will sleep on this and see what I think of it tomorrow.
+
+2024/4/7
+
+It has been a few days and I have decided to make a new branch called resources, which will be the replacement for the res folder.
+It was a pretty arbitrary decision and both options of making a seperate branch or repo are not ideal.
+If I can eventually get a backend to work and store the resources, I will do that.
