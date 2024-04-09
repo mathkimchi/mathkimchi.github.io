@@ -146,6 +146,14 @@
                 "Coding",
                 "Game Development"
             ]
+        },
+        {
+            "name": "Stars",
+            "youtube_embed": "DCBAoFuMqis",
+            "synopsis": "My performance of Stars from Les Misérables.",
+            "categories": [
+                "Musical Performance"
+            ]
         }
     ],
     "category_list": [
