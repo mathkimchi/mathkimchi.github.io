@@ -521,3 +521,7 @@ Dark/light button (automatically dark)
 
 List category on project page and project list.
 If https://doc.rust-lang.org/std/iter/struct.Intersperse.html was a feature right now, this would be so much easier.
+
+---
+
+The exact moment I pushed my changes, I realized I forgor to build.
