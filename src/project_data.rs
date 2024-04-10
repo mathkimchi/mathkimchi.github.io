@@ -31,8 +31,12 @@ impl Project {
         ProjectData::new().project_list
     }
 
+    pub fn get_kebab_name(&self) -> String {
+        self.name.to_kebab_case()
+    }
+
     pub fn get_page_link_str(&self) -> String {
-        format!("/project/{}", self.name.to_kebab_case())
+        format!("/project/{}", self.get_kebab_name())
     }
 
     fn has_category(&self, category_name: &String) -> bool {

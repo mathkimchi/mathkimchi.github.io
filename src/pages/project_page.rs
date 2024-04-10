@@ -1,6 +1,9 @@
 use yew::prelude::*;
 
-use crate::{components::navbar::Navbar, project_data::Project};
+use crate::{
+    components::navbar::Navbar,
+    project_data::{category, Project},
+};
 
 #[derive(PartialEq, Properties)]
 pub struct ProjectPageProperty {
@@ -44,12 +47,30 @@ pub fn ProjectPage(ProjectPageProperty { project_kebab_name }: &ProjectPagePrope
         None => html!(), // if there is no github link, just don't have it
     };
 
+    let categories_html = {
+        let categories_links_listed_html: Html = project
+            .categories
+            .iter()
+            .map(|category_name| html!(<li><a href={category::get_page_link_str(category_name)}>{category_name}</a></li>))
+            .collect();
+
+        html! {
+            <>
+                <p><a href="/category">{"Categories:"}</a></p>
+                <ul>
+                    {categories_links_listed_html}
+                </ul>
+            </>
+        }
+    };
+
     html! {
         <>
             <Navbar/>
             <h1>{project.name}</h1>
             {video_html}
             {github_link_html}
+            {categories_html}
         </>
     }
 }

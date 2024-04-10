@@ -10,16 +10,16 @@ Check means I did the bare minimum
     - Main purpose of this entire repository.
     - [X] Hero
     - [X] List best projects
-    - [ ] Extra links
+    - [X] Extra links
       - like github, youtube channel
   - [X] Pages for each video/project
     - [X] Don't hard code each, either use JSON or get data from youtube and github directly
     - [ ] Display its categories
-  - [ ] Categories Page
-    - [ ] One listing all categories
+  - [X] Categories Page
+    - [X] One listing all categories
       - Maybe make them heirarchical
       - Let the subcategories fold on click and also unfold to show individual projects
-    - [ ] Also a page for each individual category
+    - [X] Also a page for each individual category
       - Display the projects in those categories
       - Display related categories
   - [ ] Navigation page
@@ -495,3 +495,29 @@ This is pretty much exactly the thing I was looking for.
 
 Actually, something even better is just the include_str macro.
 In the end, I didn't really change anything.
+
+### 2024/4/9 Improve Visuals
+
+Get buddhabrot image directly without asking github.
+- I hope this makes it faster
+- I used the trunk link trick I learned
+
+For most of the css tips, I got them from W3.
+
+I moved the css into style.css and linked it with the trunk link trick.
+
+
+Make project lists look better
+- Previously, the description was the link, but that looks very ugly
+- round corners https://www.w3schools.com/css/css3_borders.asp
+- Make the entire thing clickable
+
+Dropdown settings in navbar
+- only dark/light for now
+
+Dark/light button (automatically dark)
+- toggle from https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+- Actually, I am not going to do this one because I couldn't figure out a way to quickly implement it.
+
+List category on project page and project list.
+If https://doc.rust-lang.org/std/iter/struct.Intersperse.html was a feature right now, this would be so much easier.
