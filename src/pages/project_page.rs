@@ -1,7 +1,7 @@
 use yew::prelude::*;
 
 use crate::{
-    components::navbar::Navbar,
+    components::{navbar::Navbar, project_list_html::ProjectList},
     project_data::{category, Project},
 };
 
@@ -77,18 +77,13 @@ pub fn ProjectPage(ProjectPageProperty { project_kebab_name }: &ProjectPagePrope
 
 #[function_component]
 pub fn ProjectRootPage() -> Html {
-    let project_list: Html = Project::get_project_list()
-        .into_iter()
-        .map(|project| html! {<li> <a href={project.get_page_link_str()}>{project.name}</a> </li>})
-        .collect();
+    let project_list = html! { <ProjectList project_list={Project::get_project_list()} /> };
 
     html! {
         <>
             <Navbar/>
             <h1> {"Projects"} </h1>
-            <ul>
-                {project_list}
-            </ul>
+            {project_list}
         </>
     }
 }
