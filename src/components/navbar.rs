@@ -1,11 +1,11 @@
-use gloo_console::log;
+use gloo_console::info;
 use yew::prelude::*;
 
 #[function_component]
 pub fn Navbar() -> Html {
     let settings = {
         let dark_toggle = |_| {
-            log!("Sorry, dark toggle is not working right now.");
+            info!("Sorry, dark toggle is not working right now.");
         };
 
         html! {

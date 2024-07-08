@@ -525,3 +525,20 @@ If https://doc.rust-lang.org/std/iter/struct.Intersperse.html was a feature righ
 ---
 
 The exact moment I pushed my changes, I realized I forgor to build.
+
+### 2024/4/10 Blogs
+
+I want to write blogs.
+Maybe devlog is the more appropriate term.
+
+I can either have one JSON containing all the blog entries, or have a file for each entry.
+
+If I go with the second option, I will need to find a way to read files from yew.
+I guess fetch might be what I am looking for, but this might not be the best solution in the end, because I might run into github api issues again.
+Wait, I just realized this is the same thing I did last time...
+It might be different because it is a relative fetch, but I am not going through that again.
+
+So, I am going to have one big JSON I guess.
+
+Actually, I don't want to do this right now.
+I am going to work on other projects before working more on this website.

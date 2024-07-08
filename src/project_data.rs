@@ -10,9 +10,9 @@ pub struct ProjectData {
 }
 impl ProjectData {
     pub fn new() -> ProjectData {
-        use gloo_console::log;
+        use gloo_console::debug;
 
-        log!(PROJECTS_DATA_STR);
+        debug!(PROJECTS_DATA_STR);
 
         serde_json::from_str(PROJECTS_DATA_STR).expect("Parse project data str")
     }
