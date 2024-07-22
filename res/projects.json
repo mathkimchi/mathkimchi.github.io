@@ -154,6 +154,16 @@
             "categories": [
                 "Musical Performance"
             ]
+        },
+        {
+            "name": "Orthogonal Projection",
+            "youtube_embed": "WurpUDu36lw",
+            "synopsis": "Description, formulas, and proofs about orthogonal projection.",
+            "github_link": "https://github.com/mathkimchi/mathkimchi-slideshows",
+            "categories": [
+                "Math",
+                "Linear Algebra"
+            ]
         }
     ],
     "category_list": [
@@ -166,6 +176,7 @@
         "Behavioral Simulation",
         "Game Development",
         "Game Bot",
+        "Linear Algebra",
         "Musical Performance"
     ]
 }
