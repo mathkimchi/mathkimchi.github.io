@@ -590,3 +590,16 @@ So I got the same error in [this action](https://github.com/mathkimchi/mathkimch
 as I got locally before running `rustup target add wasm32-unknown-unknown`,
 so I will just run that as a part of my `build_gh_page.yml`,
 though there might be a rust configuration `use` thing that already comes with wasm32 support.
+
+[It built succesfully but failed at deploying](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13910756719/job/38924278542).
+The little github suggestion guy said to add:
+
+```yml
+    permissions:
+      id-token: write
+      contents: read
+```
+
+so I will try it and see if it works.
+I am feeling 50/50 on its suggestion because it is made by Github
+so I feel like it will have an actual chance with fixing a github related problem.
