@@ -27,17 +27,20 @@ pub fn ProjectPage(ProjectPageProperty { project_kebab_name }: &ProjectPagePrope
         .unwrap()
         .clone();
 
-    let video_html = {
-        const MAX_WIDTH: f64 = 80.; // already in percent
-        let padding = MAX_WIDTH * 9. / 16.; // 9/16 is aspect ratio
+    let video_html = match project.youtube_embed {
+        Some(youtube_embed) => {
+            const MAX_WIDTH: f64 = 80.; // already in percent
+            let padding = MAX_WIDTH * 9. / 16.; // 9/16 is aspect ratio
 
-        html! {
-                <div style={format!("position: relative; padding-bottom: {:?}%; height: 0; max-width: {:?}%;", padding, MAX_WIDTH)}>
-                    <iframe type="text/html" src={format!("https://www.youtube.com/embed/{}", project.youtube_embed)} style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen=true allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-                        <p> {"video is unavailable"} </p>
-                    </iframe>
-                </div>
+            html! {
+                    <div style={format!("position: relative; padding-bottom: {:?}%; height: 0; max-width: {:?}%;", padding, MAX_WIDTH)}>
+                        <iframe type="text/html" src={format!("https://www.youtube.com/embed/{}", youtube_embed)} style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen=true allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                            <p> {"video is unavailable"} </p>
+                        </iframe>
+                    </div>
+            }
         }
+        None => html!(), // if there is no youtube embed link, just don't have it
     };
 
     let github_link_html = match project.github_link {

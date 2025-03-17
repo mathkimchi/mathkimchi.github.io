@@ -21,7 +21,7 @@ impl ProjectData {
 #[derive(Serialize, Deserialize, Debug, PartialEq, Clone)]
 pub struct Project {
     pub name: String,
-    pub youtube_embed: String,
+    pub youtube_embed: Option<String>,
     pub synopsis: String,
     pub github_link: Option<String>,
     pub categories: Vec<String>,
