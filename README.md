@@ -571,3 +571,17 @@ Setting up the workflow yml:
 - As for trunk, I found this action: https://github.com/marketplace/actions/trunk-action, which is claims to be "much faster than `cargo install trunk`, seconds vs minutes"
 - Then, I build via the makefile
 - Then, I am going to try something I am not sure will work with the [`upload-pages-artifact`](https://github.com/actions/upload-pages-artifact) action and then [`deploy-pages`](https://github.com/actions/deploy-pages) action.
+
+Hmmm...
+[It didn't work.](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13909817378/job/38921364837)
+I actually haven't built this on my new laptop yet, so I will install trunk and try this on my system first.
+
+Note: do not trust https://trunkrs.dev/ suggestion to do `nix-env -i trunk`,
+it crashed my whole computer.
+
+The first error was happening because `trunk build` was ignoring the `target = "target.html"` inside
+`trunk.toml` but that was resolved by renaming `trunk.toml` -> `Trunk.toml`.
+
+Had to run `rustup target add wasm32-unknown-unknown` locally, but not sure if github actions has that.
+
+Now `make build` runs successfully locally.
