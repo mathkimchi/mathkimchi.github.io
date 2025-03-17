@@ -17,7 +17,25 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+    - name: set up trunk
+      uses: jetli/trunk-action@v0.5.0
+
+    - name: build page
+      run: make build
+
+    # - name: checkout gh-pages branch
+    #   uses: actions/checkout@v4
+    #   with:
+    #     ref: gh-pages
+    #     path: gh-pages
+
+    # - name: copy build to gh-pages branch
+    #   run: cp -r docs/* gh-pages
+
+    - name: upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: docs/
+
+    - name: deploy to gh-pages
+      uses: actions/deploy-pages@v4

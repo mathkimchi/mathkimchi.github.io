@@ -565,3 +565,9 @@ I will be trying to make something similar to this.
 The standard name for this branch is actually `gh-pages`, not `ghpage`.
 
 I'll commit the current changes and then create an empty branch with this name with `git switch --orphan gh-pages`.
+
+Setting up the workflow yml:
+- I copied the official Action/rust workflow thing, and it seems that GH Action now comes with cargo by default.
+- As for trunk, I found this action: https://github.com/marketplace/actions/trunk-action, which is claims to be "much faster than `cargo install trunk`, seconds vs minutes"
+- Then, I build via the makefile
+- Then, I am going to try something I am not sure will work with the [`upload-pages-artifact`](https://github.com/actions/upload-pages-artifact) action and then [`deploy-pages`](https://github.com/actions/deploy-pages) action.
