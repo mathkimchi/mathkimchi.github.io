@@ -548,3 +548,20 @@ I am going to work on other projects before working more on this website.
 It's been a while.
 
 I am going to try github action once again.
+
+The goal is to set it up so that:
+- EVENT: When the `main` branch's content changes (merge, commit)
+- ACTION: update the `ghpage` branch to have the main branch's code and res, then run `make build` to update the `ghpage` branch's `/docs` folder
+
+now, I can gitignore the `/docs` folder in the main branch.
+
+NOTE: the GHPage site is being deployed from the `/docs` folder.
+
+Ideally, there would be a way to have the `ghpage` branch's content only have the site content,
+without explicitly containing the source code like `/src` and `/res` and etc.
+
+Hmmm, [this repo](https://github.com/Ja-sonYun/yew-template-for-github-io/blob/main/.github/workflows/publish_gh_pages.yml) by Ja-sonYun seems to be doing something similar to what I want, but even better than I had imagined.
+I will be trying to make something similar to this.
+The standard name for this branch is actually `gh-pages`, not `ghpage`.
+
+I'll commit the current changes and then create an empty branch with this name with `git switch --orphan gh-pages`.
