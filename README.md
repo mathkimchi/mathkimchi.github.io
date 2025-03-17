@@ -572,6 +572,8 @@ Setting up the workflow yml:
 - Then, I build via the makefile
 - Then, I am going to try something I am not sure will work with the [`upload-pages-artifact`](https://github.com/actions/upload-pages-artifact) action and then [`deploy-pages`](https://github.com/actions/deploy-pages) action.
 
+...
+
 Hmmm...
 [It didn't work.](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13909817378/job/38921364837)
 I actually haven't built this on my new laptop yet, so I will install trunk and try this on my system first.
@@ -586,10 +588,14 @@ Had to run `rustup target add wasm32-unknown-unknown` locally, but not sure if g
 
 Now `make build` runs successfully locally.
 
+...
+
 So I got the same error in [this action](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13910705809/job/38924117020)
 as I got locally before running `rustup target add wasm32-unknown-unknown`,
 so I will just run that as a part of my `build_gh_page.yml`,
 though there might be a rust configuration `use` thing that already comes with wasm32 support.
+
+...
 
 [It built succesfully but failed at deploying](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13910756719/job/38924278542).
 The little github suggestion guy said to add:
@@ -604,9 +610,20 @@ so I will try it and see if it works.
 I am feeling 50/50 on its suggestion because it is made by Github
 so I feel like it will have an actual chance with fixing a github related problem.
 
+...
+
 [I got a similar error with a different permission](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13910849174/job/38924575634).
 I guess github guy was on the right track but not entirely correct.
 I added a new permission and this time, I don't think the permissions will be an issue because
 the [official example](https://github.com/actions/deploy-pages) is looking similar.
 
 On a sidenote, I kinda feel bad about using gh actions because this is possible to automate on my side but it is more convenient to have it run using gh's resources.
+
+...
+
+Okay, [another error](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13910978416/job/38924960199)
+and I realized I missed one last section of the [official example](https://github.com/actions/deploy-pages): the environment.
+
+https://github.com/actions/deploy-pages/blob/854d7aa1b99e4509c4d1b53d69b7ba4eaf39215a/README.md?plain=1#L35
+
+The one remaining difference is the build vs deploy jobs, but hopefully that doesn't break stuff.
