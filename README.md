@@ -603,3 +603,10 @@ The little github suggestion guy said to add:
 so I will try it and see if it works.
 I am feeling 50/50 on its suggestion because it is made by Github
 so I feel like it will have an actual chance with fixing a github related problem.
+
+[I got a similar error with a different permission](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13910849174/job/38924575634).
+I guess github guy was on the right track but not entirely correct.
+I added a new permission and this time, I don't think the permissions will be an issue because
+the [official example](https://github.com/actions/deploy-pages) is looking similar.
+
+On a sidenote, I kinda feel bad about using gh actions because this is possible to automate on my side but it is more convenient to have it run using gh's resources.

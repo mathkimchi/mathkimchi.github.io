@@ -1,4 +1,4 @@
-name: Rust
+name: Build and deploy gh page
 
 on:
   push:
@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
+      pages: write
       id-token: write
-      contents: read
 
     steps:
     - uses: actions/checkout@v4
