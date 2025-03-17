@@ -4,7 +4,7 @@ all:
 # is also used in the workflow
 build:
 	trunk build --release
-	cp docs/index.html docs/404.html
+	cp dist/index.html dist/404.html
 
 # Yeah, technically is serve not watch
 watch:
@@ -13,4 +13,4 @@ watch:
 # runs locally
 run:
 	make build
-	cd docs ; python3 -m http.server 8080
+	cd dist ; python3 -m http.server 8080

@@ -627,3 +627,17 @@ and I realized I missed one last section of the [official example](https://githu
 https://github.com/actions/deploy-pages/blob/854d7aa1b99e4509c4d1b53d69b7ba4eaf39215a/README.md?plain=1#L35
 
 The one remaining difference is the build vs deploy jobs, but hopefully that doesn't break stuff.
+
+...
+
+Yooo, it worked!
+
+At least, there was no error.
+
+Under `Settings`->`Pages`->`Build and deployment`->`Source`,
+I selected `Github Actions` because that is what I assume is supposed to happen.
+
+With this, I don't even need the gh-pages branch as well as the docs folder.
+I will delete the branch and remove the docs folder then .gitignore it.
+I'm actually going to rename the `docs` folder to the `dist` folder, which is the original default output directory for Trunk.
+I only changed this to docs because that is what github pages recommended.

@@ -41,12 +41,12 @@ jobs:
     #     path: gh-pages
 
     # - name: copy build to gh-pages branch
-    #   run: cp -r docs/* gh-pages
+    #   run: cp -r dist/* gh-pages
 
     - name: upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: docs/
+        path: dist/
 
     - name: deploy to gh-pages
       id: deployment
