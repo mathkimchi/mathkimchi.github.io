@@ -164,6 +164,15 @@
                 "Math",
                 "Linear Algebra"
             ]
+        },
+        {
+            "name": "Math Kimchi Homepage",
+            "synopsis": "My page generated with Rust Yew from a json of projects and automatically deployed to GitHub Pages.",
+            "github_link": "https://github.com/mathkimchi/mathkimchi.github.io",
+            "categories": [
+                "Best",
+                "Coding"
+            ]
         }
     ],
     "category_list": [

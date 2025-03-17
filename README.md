@@ -641,3 +641,8 @@ With this, I don't even need the gh-pages branch as well as the docs folder.
 I will delete the branch and remove the docs folder then .gitignore it.
 I'm actually going to rename the `docs` folder to the `dist` folder, which is the original default output directory for Trunk.
 I only changed this to docs because that is what github pages recommended.
+
+...
+
+I'm going to add this Math Kimchi Home Page as a project,
+because I want to make a video on it and I want to make sure the changes actually show up.
