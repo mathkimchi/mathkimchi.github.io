@@ -542,3 +542,9 @@ So, I am going to have one big JSON I guess.
 
 Actually, I don't want to do this right now.
 I am going to work on other projects before working more on this website.
+
+### 2025/03/16 Github Action
+
+It's been a while.
+
+I am going to try github action once again.
