@@ -585,3 +585,8 @@ The first error was happening because `trunk build` was ignoring the `target = "
 Had to run `rustup target add wasm32-unknown-unknown` locally, but not sure if github actions has that.
 
 Now `make build` runs successfully locally.
+
+So I got the same error in [this action](https://github.com/mathkimchi/mathkimchi.github.io/actions/runs/13910705809/job/38924117020)
+as I got locally before running `rustup target add wasm32-unknown-unknown`,
+so I will just run that as a part of my `build_gh_page.yml`,
+though there might be a rust configuration `use` thing that already comes with wasm32 support.

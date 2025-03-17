@@ -20,6 +20,9 @@ jobs:
     - name: set up trunk
       uses: jetli/trunk-action@v0.5.0
 
+    - name: set up rust wasm target
+      run: rustup target add wasm32-unknown-unknown
+
     - name: build page
       run: make build
 
