@@ -167,6 +167,7 @@
         },
         {
             "name": "Math Kimchi Homepage",
+            "youtube_embed": "d8l1gjkkRhc",
             "synopsis": "My page generated with Rust Yew from a json of projects and automatically deployed to GitHub Pages.",
             "github_link": "https://github.com/mathkimchi/mathkimchi.github.io",
             "categories": [
