@@ -1,5 +1,5 @@
 use crate::{
-    components::{navbar::Navbar, project_list_html::ProjectList},
+    components::{page_base::PageBase, project_list_html::ProjectList},
     project_data::Project,
 };
 use yew::prelude::*;
@@ -9,7 +9,16 @@ fn Hero() -> Html {
     // it is easier for me to develop live when I don't link locally
 
     // html!(<div id="hero" style="background-image: url('/res/buddhabrot.png'); background-repeat: no-repeat; background-size: cover;"> <span class="vertcenter" id="heroText"><h1 class="horcenter" style="font-size: 5vw; position: absolute; bottom: -250%;">{"Alvin Kim"}</h1><br/><p class="horcenter" style="color: gray; position: absolute; top: 0%;">{"i like coding"}</p></span> </div>)
-    html!(<div id="hero" style="background-image: url('/buddhabrot.png'); background-repeat: no-repeat; background-size: cover;"> <span class="vertcenter" id="heroText"><h1 class="horcenter" style="font-size: 5vw; position: absolute; bottom: -250%;">{"Alvin Kim"}</h1><br/><p class="horcenter" style="color: gray; position: absolute; top: 0%;">{"i like coding"}</p></span> </div>)
+    html! {
+        <div id="hero" style="background-image: url('/buddhabrot.png'); background-repeat: no-repeat; background-size: cover;">
+            <span class="vertcenter" id="heroText">
+                <h1 class="horcenter" style="font-size: 5vw; position: absolute; bottom: -250%;">{"Alvin Kim"}</h1>
+                // <br/>
+                // <p class="horcenter" style="color: gray; position: absolute; top: 0%;">{"i like coding"}</p>
+                // TODO: under my name, I want to have words like Coder, Mathematician, Singer, etc where each word can be clicked on to reveal my code portfolio & stuff
+            </span>
+        </div>
+    }
 }
 
 // #[derive(PartialEq, Properties)]
@@ -46,28 +55,12 @@ fn Hero() -> Html {
 
 #[function_component]
 pub fn HomePage() -> Html {
-    let socials = html! {
-        <>
-            <h2>{"Socials:"}</h2>
-            <a href={"https://github.com/mathkimchi"} style="padding: 5px;">
-                <img src="https://github.githubassets.com/favicons/favicon-dark.png" style="width: 30px; height: 30px;"/>
-                // {"mathkimchi"} // name is redundant?
-            </a>
-            <a href={"https://www.youtube.com/@mathkimchi"} style="padding: 5px;">
-                <img src="https://www.youtube.com/s/desktop/accca349/img/favicon.ico" style="width: 30px; height: 30px;"/>
-            </a>
-        </>
-    };
-
     html! {
-        <>
-            <Navbar/>
+        <PageBase>
             <Hero/>
             <hr/>
             <h1>{"Best Projects:"}</h1>
             <ProjectList project_list={Project::get_projects_with_category(&"best".to_string())}/>
-            <hr/>
-            {socials}
-        </>
+        </PageBase>
     }
 }

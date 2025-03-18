@@ -646,3 +646,24 @@ I only changed this to docs because that is what github pages recommended.
 
 I'm going to add this Math Kimchi Home Page as a project,
 because I want to make a video on it and I want to make sure the changes actually show up.
+
+### 2025/03/17 Footer
+
+I am going to post a vid on this whole homepage,
+and something I want to add before making a video is the footer,
+that should contain information about this website and credit myself.
+
+I made a PageBase so that I can universally change basic pages (like adding a footer)
+without having to change each page.
+I could force the page base by just putting it in the router,
+but I want to give the choice not to have it.
+
+For the footer, I want to have:
+- The Math Kimchi logo
+  - I unironically lost this, so I am kind of screwed
+  - Hooo, I found it in: https://github.com/mathkimchi/mathkimchi-slideshows/blob/main/mathkimchi.jpg
+- "Made with Yew by Math Kimchi" with a link to this repository
+- Copyright (maybe), I just want to link it to the LICENSE for this page, which currently doesn't exist
+  - Do I need to do some legal thing to register copyright?
+  - I want to put this under MIT license, hopefully all the resources I learned from will allow for that
+- I'm just going to move my whole socials (from the main page) here

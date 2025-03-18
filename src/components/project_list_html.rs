@@ -1,11 +1,11 @@
-use yew::prelude::*;
-
 use crate::project_data::{category, Project};
+use yew::prelude::*;
 
 #[derive(PartialEq, Properties)]
 struct ProjectProperty {
     pub project: Project,
 }
+/// REVIEW: just implement `Component` for `Project` itself?
 #[function_component]
 fn ProjectItem(ProjectProperty { project }: &ProjectProperty) -> Html {
     gloo_console::debug!(project.get_page_link_str());

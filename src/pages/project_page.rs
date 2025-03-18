@@ -1,9 +1,8 @@
-use yew::prelude::*;
-
 use crate::{
-    components::{navbar::Navbar, project_list_html::ProjectList},
+    components::{page_base::PageBase, project_list_html::ProjectList},
     project_data::{category, Project},
 };
+use yew::prelude::*;
 
 #[derive(PartialEq, Properties)]
 pub struct ProjectPageProperty {
@@ -14,11 +13,10 @@ pub struct ProjectPageProperty {
 pub fn ProjectPage(ProjectPageProperty { project_kebab_name }: &ProjectPageProperty) -> Html {
     if !Project::project_map_by_kebab().contains_key(project_kebab_name) {
         return html! {
-            <>
-                <Navbar/>
+            <PageBase>
                 <p>{"The project \""} {project_kebab_name} {"\" does not exist."}</p>
                 <p>{"Check your url for typos or go to the "} <a href="/"> {"main page"} </a> {"."}</p>
-            </>
+            </PageBase>
         };
     }
 
@@ -68,13 +66,12 @@ pub fn ProjectPage(ProjectPageProperty { project_kebab_name }: &ProjectPagePrope
     };
 
     html! {
-        <>
-            <Navbar/>
+        <PageBase>
             <h1>{project.name}</h1>
             {video_html}
             {github_link_html}
             {categories_html}
-        </>
+        </PageBase>
     }
 }
 
@@ -83,10 +80,9 @@ pub fn ProjectRootPage() -> Html {
     let project_list = html! { <ProjectList project_list={Project::get_project_list()} /> };
 
     html! {
-        <>
-            <Navbar/>
+        <PageBase>
             <h1> {"Projects"} </h1>
             {project_list}
-        </>
+        </PageBase>
     }
 }
