@@ -667,3 +667,8 @@ For the footer, I want to have:
   - Do I need to do some legal thing to register copyright?
   - I want to put this under MIT license, hopefully all the resources I learned from will allow for that
 - I'm just going to move my whole socials (from the main page) here
+
+### 2025/06/08 Name Change
+
+I legally changed my name from `Alvin Kim` to `Alvin Lyuh`.
+`Kim` is my middle name now, so I am putting `Alvin Kim Lyuh` in most places to prevent confusion.

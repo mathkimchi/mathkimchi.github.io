@@ -8,11 +8,11 @@ use yew::prelude::*;
 fn Hero() -> Html {
     // it is easier for me to develop live when I don't link locally
 
-    // html!(<div id="hero" style="background-image: url('/res/buddhabrot.png'); background-repeat: no-repeat; background-size: cover;"> <span class="vertcenter" id="heroText"><h1 class="horcenter" style="font-size: 5vw; position: absolute; bottom: -250%;">{"Alvin Kim"}</h1><br/><p class="horcenter" style="color: gray; position: absolute; top: 0%;">{"i like coding"}</p></span> </div>)
+    // html!(<div id="hero" style="background-image: url('/res/buddhabrot.png'); background-repeat: no-repeat; background-size: cover;"> <span class="vertcenter" id="heroText"><h1 class="horcenter" style="font-size: 5vw; position: absolute; bottom: -250%;">{"Alvin Kim Lyuh"}</h1><br/><p class="horcenter" style="color: gray; position: absolute; top: 0%;">{"i like coding"}</p></span> </div>)
     html! {
         <div id="hero" style="background-image: url('/buddhabrot.png'); background-repeat: no-repeat; background-size: cover;">
             <span class="vertcenter" id="heroText">
-                <h1 class="horcenter" style="font-size: 5vw; position: absolute; bottom: -250%;">{"Alvin Kim"}</h1>
+                <h1 class="horcenter" style="font-size: 5vw; position: absolute; bottom: -250%;">{"Alvin Kim Lyuh"}</h1>
                 // <br/>
                 // <p class="horcenter" style="color: gray; position: absolute; top: 0%;">{"i like coding"}</p>
                 // TODO: under my name, I want to have words like Coder, Mathematician, Singer, etc where each word can be clicked on to reveal my code portfolio & stuff
