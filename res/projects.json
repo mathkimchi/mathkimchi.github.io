@@ -1,6 +1,16 @@
 {
     "project_list": [
         {
+            "name": "Sonamu",
+            "youtube_embed": "73bF5PrCmOE",
+            "synopsis": "A Wayland compositor that organizes apps in a tree.",
+            "github_link": "https://github.com/mathkimchi/sonamu",
+            "categories": [
+                "Best",
+                "Coding"
+            ]
+        },
+        {
             "name": "Buddhabrot Fractal",
             "youtube_embed": "RPyMQrB7p-M?si=a-AmFGz7IhBmyBR1",
             "synopsis": "A rust renderer of the Buddhabrot fractal, a cousin of the Mandelbrot set.",
